@@ -20,6 +20,28 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
+    <!-- image css -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+      .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+    </style>
   </head>
 
   <body>
@@ -68,14 +90,49 @@
               </h2>
             </div>
           </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/menu.png" alt="menu's" style="padding-top: 50px; padding-left: 175px;">
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">De menu's zijn vanaf 10 personen, vooraf te bestellen. Bij deze menu's kunnen wij u een passende wijn adviseren.
-              Graag vernemen wij bij uw reservering of u gebruik wenst te maken van een van de keuzemenu's</p>
+         <div class="w3-row-padding">
+            <div class="w3-container w3-third">
+              <img src="img/menu1.jpg" style="width:100%;cursor:pointer" 
+              onclick="onClick(this)" class="w3-hover-opacity">
+            </div>
+            <div class="w3-container w3-third">
+              <img src="img/menu2.jpg" style="width:100%;cursor:pointer" 
+              onclick="onClick(this)" class="w3-hover-opacity">
+            </div>
+            <div class="w3-container w3-third">
+              <img src="img/menu3.jpg" style="width:100%;cursor:pointer" 
+              onclick="onClick(this)" class="w3-hover-opacity">
             </div>
           </div>
+
+          <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom">
+              <img id="img01" style="width:100%">
+            </div>
+          </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <div class="product-item">
+          <div class="product-item-title d-flex">
+            <div class="bg-faded p-5 d-flex mr-auto rounded">
+              <h2 class="section-heading mb-0">
+                <span class="section-heading-upper">Specials</span>
+                <span class="section-heading-lower">LenteSpecial</span>
+              </h2>
+            </div>
+          </div>
+          <div class="w3-row-padding">
+            <div class="w3-container w3-third">
+              <img src="img/lente.jpg" style="width:100%;cursor:pointer" 
+              onclick="onClick(this)" class="w3-hover-opacity">
+            </div>
+          </div>
       </div>
     </section>
 
@@ -124,7 +181,7 @@
           <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/hoofdgerecht.jpg" alt="plaatje van hoofdgerecht">
           <div class="product-item-description d-flex mr-auto">
             <div class="bg-faded p-5 rounded">
-              <p class="mb-0"><strong>Vlees en gevogeltegerechten</strong><br /> <strong>Winsterstoof</strong><br />Winterstoof van wildzwijn vlees, gehakt, groente, gevogelte en gnocchi <strong>€ 16,40</strong></p>
+              <p class="mb-0"><h3>Vlees en gevogeltegerechten</h3><br /> <strong>Winsterstoof</strong><br />Winterstoof van wildzwijn vlees, gehakt, groente, gevogelte en gnocchi <strong>€ 16,40</strong></p>
               <p><strong>Valderon</strong><br /> Rolletjes huisgebakken fricandeau, gevuld met kaas en tomatensaus <strong>€ 15,80</strong></p>
               <p><strong>Procureur Bon</strong><br /> Een heerlijke Ibero gebraad, gemarineerd en geserveerd met pepersaus (ca. 500 gram) <strong>€ 17,90</strong></p>
               <p><strong>Brochette du porc St. Germain</strong><br /> Varkenshaas spies met chapignonroomsaus <strong>€ 16,10</strong></p>
@@ -136,7 +193,7 @@
               <p><strong>Herten T-bone steak</strong><br /> Stukje vlees van topkwaliteit <strong>€ 19,90</strong></p>
             </div>
             <div class="bg-faded p-5 rounded">
-              <p class="mb-0"><strong>Visgerechten</strong><br /> <strong>Poisson Mexico</strong><br />Heerlijke visfilet met gebakken groente en Mexicaanse kruiden <strong>€ 16,10</strong></p>
+              <p class="mb-0"><h3>Visgerechten</h3><br /> <strong>Poisson Mexico</strong><br />Heerlijke visfilet met gebakken groente en Mexicaanse kruiden <strong>€ 16,10</strong></p>
               <p><strong>Slibtong</strong><br />Overbekend <strong>€ 16,90</strong></p>
               <p><strong>Fantasie La Mer</strong><br /> Diverse vis en visdelicatessen in een heerlijk sausje <strong>€ 17,50</strong></p>
               <p><strong>Montpellier Favorite</strong><br />Schelvisfilet, ingerold in spek met witte wijnsaus <strong>€ 16,90</strong></p>
@@ -144,7 +201,7 @@
               <p><strong>Salade Royale (maaltijdsalade)</strong><br />Heerlijke salade van diverse zeevruchten, o.a. gerookte paling, krab, gamba's, tonijnsalade en makreel filet americain <strong>€ 16,80</strong></p>
             </div>
             <div class="bg-faded p-5 rounded">
-              <p class="mb-0"><strong>Vegetarische gerechten</strong><br /> <strong>Tortilla Fritte</strong><br />Gebakken tortilla met gebakken groente en kaas <strong>€ 9,70</strong></p>
+              <p class="mb-0"><h3>Vegetarische gerechten</h3><br /> <strong>Tortilla Fritte</strong><br />Gebakken tortilla met gebakken groente en kaas <strong>€ 9,70</strong></p>
               <p><strong>Gnocchi Peperonata</strong><br />Gnocchi met ui, paprika en champignons in tomatensaus <strong>€ 9,70</strong></p>
             </div>
           </div>
@@ -182,13 +239,39 @@
     <footer class="footer text-faded text-center py-5">
       <div class="container">
         <p class="m-0 small">Copyright &copy; Mason Kleist 2018</p>
+        <a href="https://www.facebook.com/doudegast.voet" class="fa fa-facebook"></a>
       </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
 
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
   </body>
 
 </html>
